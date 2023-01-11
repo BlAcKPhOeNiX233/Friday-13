@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A1247744296EF24D005579CB /* Friday_13App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1247743296EF24D005579CB /* Friday_13App.swift */; };
 		A1247746296EF24D005579CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1247745296EF24D005579CB /* ContentView.swift */; };
-		A1247748296EF24E005579CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1247747296EF24E005579CB /* Assets.xcassets */; };
 		A124774B296EF24E005579CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A124774A296EF24E005579CB /* Preview Assets.xcassets */; };
 		A1247755296EF24E005579CB /* Friday_13Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1247754296EF24E005579CB /* Friday_13Tests.swift */; };
 		A124775F296EF24E005579CB /* Friday_13UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A124775E296EF24E005579CB /* Friday_13UITests.swift */; };
 		A1247761296EF24E005579CB /* Friday_13UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1247760296EF24E005579CB /* Friday_13UITestsLaunchTests.swift */; };
+		A13E679F296F7AF200B46E49 /* Friday_13App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13E6799296F7AF200B46E49 /* Friday_13App.swift */; };
+		A13E67A0296F7AF200B46E49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A13E679A296F7AF200B46E49 /* Assets.xcassets */; };
+		A13E67A2296F7AF200B46E49 /* MyITFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13E679D296F7AF200B46E49 /* MyITFields.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,15 +36,16 @@
 
 /* Begin PBXFileReference section */
 		A1247740296EF24D005579CB /* Friday-13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Friday-13.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1247743296EF24D005579CB /* Friday_13App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friday_13App.swift; sourceTree = "<group>"; };
 		A1247745296EF24D005579CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		A1247747296EF24E005579CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A124774A296EF24E005579CB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A1247750296EF24E005579CB /* Friday-13Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Friday-13Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1247754296EF24E005579CB /* Friday_13Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friday_13Tests.swift; sourceTree = "<group>"; };
 		A124775A296EF24E005579CB /* Friday-13UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Friday-13UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A124775E296EF24E005579CB /* Friday_13UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friday_13UITests.swift; sourceTree = "<group>"; };
 		A1247760296EF24E005579CB /* Friday_13UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friday_13UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A13E6799296F7AF200B46E49 /* Friday_13App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friday_13App.swift; sourceTree = "<group>"; };
+		A13E679A296F7AF200B46E49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A13E679D296F7AF200B46E49 /* MyITFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyITFields.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +76,11 @@
 		A1247737296EF24D005579CB = {
 			isa = PBXGroup;
 			children = (
-				A1247742296EF24D005579CB /* Friday-13 */,
+				A1247749296EF24E005579CB /* Preview Content */,
+				A13E679D296F7AF200B46E49 /* MyITFields.swift */,
+				A13E6799296F7AF200B46E49 /* Friday_13App.swift */,
+				A1247745296EF24D005579CB /* ContentView.swift */,
+				A13E679A296F7AF200B46E49 /* Assets.xcassets */,
 				A1247753296EF24E005579CB /* Friday-13Tests */,
 				A124775D296EF24E005579CB /* Friday-13UITests */,
 				A1247741296EF24D005579CB /* Products */,
@@ -89,17 +95,6 @@
 				A124775A296EF24E005579CB /* Friday-13UITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		A1247742296EF24D005579CB /* Friday-13 */ = {
-			isa = PBXGroup;
-			children = (
-				A1247743296EF24D005579CB /* Friday_13App.swift */,
-				A1247745296EF24D005579CB /* ContentView.swift */,
-				A1247747296EF24E005579CB /* Assets.xcassets */,
-				A1247749296EF24E005579CB /* Preview Content */,
-			);
-			path = "Friday-13";
 			sourceTree = "<group>";
 		};
 		A1247749296EF24E005579CB /* Preview Content */ = {
@@ -232,7 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A124774B296EF24E005579CB /* Preview Assets.xcassets in Resources */,
-				A1247748296EF24E005579CB /* Assets.xcassets in Resources */,
+				A13E67A0296F7AF200B46E49 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +252,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A13E67A2296F7AF200B46E49 /* MyITFields.swift in Sources */,
 				A1247746296EF24D005579CB /* ContentView.swift in Sources */,
-				A1247744296EF24D005579CB /* Friday_13App.swift in Sources */,
+				A13E679F296F7AF200B46E49 /* Friday_13App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,7 +412,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Friday-13/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Preview Content\"";
 				DEVELOPMENT_TEAM = LPVYFJX62D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -445,7 +441,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Friday-13/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Preview Content\"";
 				DEVELOPMENT_TEAM = LPVYFJX62D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

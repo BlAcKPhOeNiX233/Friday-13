@@ -11,7 +11,7 @@ import SwiftUI
 struct Friday_13App: App {
     var body: some Scene {
         WindowGroup {
-            MyITFiels()
+            ContentView()
         }
     }
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MyITFiels: View {
+struct MyITFields: View {
     var body: some View {
         NavigationStack{
             VStack{
@@ -52,8 +52,8 @@ struct MyITFiels: View {
         }
     }
 }
-struct MyITFiels_Previews: PreviewProvider {
+struct MyITFields_Previews: PreviewProvider {
     static var previews: some View {
-        MyITFiels()
+        MyITFields()
     }
 }
