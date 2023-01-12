@@ -14,6 +14,7 @@
 		A13E67A0296F7AF200B46E49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A13E679A296F7AF200B46E49 /* Assets.xcassets */; };
 		A13E67A2296F7AF200B46E49 /* MyITFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13E679D296F7AF200B46E49 /* MyITFields.swift */; };
 		D3BA136E29704CB700C942B9 /* TabViewFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BA136D29704CB700C942B9 /* TabViewFields.swift */; };
+		D3D290CE297051B700745AAE /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D290CD297051B700745AAE /* DescriptionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		A13E679A296F7AF200B46E49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A13E679D296F7AF200B46E49 /* MyITFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyITFields.swift; sourceTree = "<group>"; };
 		D3BA136D29704CB700C942B9 /* TabViewFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewFields.swift; sourceTree = "<group>"; };
+		D3D290CD297051B700745AAE /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +78,8 @@
 			children = (
 				A133CD1D297041B100EA846C /* Models */,
 				A1247749296EF24E005579CB /* Preview Content */,
-				A13E679D296F7AF200B46E49 /* MyITFields.swift */,
 				D3BA136D29704CB700C942B9 /* TabViewFields.swift */,
-				A13E6799296F7AF200B46E49 /* Friday_13App.swift */,
+				D3D290CD297051B700745AAE /* DescriptionView.swift */,
 				A1247745296EF24D005579CB /* ContentView.swift */,
 				A13E679A296F7AF200B46E49 /* Assets.xcassets */,
 				A1247741296EF24D005579CB /* Products */,
@@ -98,7 +99,9 @@
 		A1247749296EF24E005579CB /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				A13E679D296F7AF200B46E49 /* MyITFields.swift */,
 				A124774A296EF24E005579CB /* Preview Assets.xcassets */,
+				A13E6799296F7AF200B46E49 /* Friday_13App.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				D3BA136E29704CB700C942B9 /* TabViewFields.swift in Sources */,
 				A13E67A2296F7AF200B46E49 /* MyITFields.swift in Sources */,
 				A133CD1F297041DD00EA846C /* ITFields.swift in Sources */,
+				D3D290CE297051B700745AAE /* DescriptionView.swift in Sources */,
 				A1247746296EF24D005579CB /* ContentView.swift in Sources */,
 				A13E679F296F7AF200B46E49 /* Friday_13App.swift in Sources */,
 			);

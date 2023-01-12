@@ -15,10 +15,11 @@ struct MyITFields: View {
                 Color("myBackground").ignoresSafeArea()
                 VStack{
                     Text("Choose the field your interested in !")
+                        .opacity(0.2)
                         .fontWeight(.semibold)
-                        .foregroundColor(.gray)
                         .font(.headline)
                         .frame(width: 350,height: 240)
+                    
                     
                     
                     Text("Other IT Fields")

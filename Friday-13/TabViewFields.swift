@@ -25,7 +25,7 @@ struct TabViewFields: View {
                 .cornerRadius(10)
             }.sheet(isPresented: $isShowingSheet)
             {
-                Text("Something")
+                DescriptionView()
                     .presentationDetents([.medium,.large])
             }
             
