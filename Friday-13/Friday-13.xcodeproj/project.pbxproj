@@ -12,7 +12,7 @@
 		A133CD1F297041DD00EA846C /* ITFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = A133CD1E297041DD00EA846C /* ITFields.swift */; };
 		A13E679F296F7AF200B46E49 /* Friday_13App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13E6799296F7AF200B46E49 /* Friday_13App.swift */; };
 		A13E67A0296F7AF200B46E49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A13E679A296F7AF200B46E49 /* Assets.xcassets */; };
-		A13E67A2296F7AF200B46E49 /* MyITFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13E679D296F7AF200B46E49 /* MyITFields.swift */; };
+		A13E67A2296F7AF200B46E49 /* MyITField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13E679D296F7AF200B46E49 /* MyITField.swift */; };
 		D3BA136E29704CB700C942B9 /* TabViewFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BA136D29704CB700C942B9 /* TabViewFields.swift */; };
 		D3D290CE297051B700745AAE /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D290CD297051B700745AAE /* DescriptionView.swift */; };
 /* End PBXBuildFile section */
@@ -43,7 +43,7 @@
 		A133CD1E297041DD00EA846C /* ITFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITFields.swift; sourceTree = "<group>"; };
 		A13E6799296F7AF200B46E49 /* Friday_13App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friday_13App.swift; sourceTree = "<group>"; };
 		A13E679A296F7AF200B46E49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A13E679D296F7AF200B46E49 /* MyITFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyITFields.swift; sourceTree = "<group>"; };
+		A13E679D296F7AF200B46E49 /* MyITField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyITField.swift; sourceTree = "<group>"; };
 		D3BA136D29704CB700C942B9 /* TabViewFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewFields.swift; sourceTree = "<group>"; };
 		D3D290CD297051B700745AAE /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,7 +78,7 @@
 			children = (
 				A13E6799296F7AF200B46E49 /* Friday_13App.swift */,
 				A133CD1D297041B100EA846C /* Models */,
-				A13E679D296F7AF200B46E49 /* MyITFields.swift */,
+				A13E679D296F7AF200B46E49 /* MyITField.swift */,
 				D3BA136D29704CB700C942B9 /* TabViewFields.swift */,
 				D3D290CD297051B700745AAE /* DescriptionView.swift */,
 				A1247745296EF24D005579CB /* ContentView.swift */,
@@ -245,7 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3BA136E29704CB700C942B9 /* TabViewFields.swift in Sources */,
-				A13E67A2296F7AF200B46E49 /* MyITFields.swift in Sources */,
+				A13E67A2296F7AF200B46E49 /* MyITField.swift in Sources */,
 				A133CD1F297041DD00EA846C /* ITFields.swift in Sources */,
 				D3D290CE297051B700745AAE /* DescriptionView.swift in Sources */,
 				A1247746296EF24D005579CB /* ContentView.swift in Sources */,

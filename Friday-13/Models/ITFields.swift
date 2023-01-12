@@ -8,8 +8,8 @@
 import Foundation
 
 struct ITField {
-    private let title: String, description: String, image: String;
-    private let percentage: Int;
+    let title: String, description: String, image: String;
+    var percentage: Int?;
     
     func getTitle() -> String {
         return title;
@@ -23,7 +23,7 @@ struct ITField {
         return image;
     }
     
-    func getPercentage() -> Int {
+    func getPercentage() -> Int? {
         return percentage;
     }
 }
