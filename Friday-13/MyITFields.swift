@@ -11,7 +11,7 @@ struct MyITFields: View {
     var body: some View {
         NavigationStack{
             VStack{
-                Text("Choose the field your interested in !")
+                Text("Choose the field your interested in!")
                     .fontWeight(.semibold)
                     .foregroundColor(.gray)
                     .font(.headline)
