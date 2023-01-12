@@ -76,12 +76,14 @@
 		A1247737296EF24D005579CB = {
 			isa = PBXGroup;
 			children = (
+				A13E6799296F7AF200B46E49 /* Friday_13App.swift */,
 				A133CD1D297041B100EA846C /* Models */,
-				A1247749296EF24E005579CB /* Preview Content */,
+				A13E679D296F7AF200B46E49 /* MyITFields.swift */,
 				D3BA136D29704CB700C942B9 /* TabViewFields.swift */,
 				D3D290CD297051B700745AAE /* DescriptionView.swift */,
 				A1247745296EF24D005579CB /* ContentView.swift */,
 				A13E679A296F7AF200B46E49 /* Assets.xcassets */,
+				A1247749296EF24E005579CB /* Preview Content */,
 				A1247741296EF24D005579CB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,9 +101,7 @@
 		A1247749296EF24E005579CB /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				A13E679D296F7AF200B46E49 /* MyITFields.swift */,
 				A124774A296EF24E005579CB /* Preview Assets.xcassets */,
-				A13E6799296F7AF200B46E49 /* Friday_13App.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
