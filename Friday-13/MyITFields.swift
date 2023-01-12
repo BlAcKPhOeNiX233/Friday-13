@@ -45,6 +45,8 @@ struct MyITFields: View {
                 }.tabViewStyle(.page(indexDisplayMode: .never))
                     .frame(height:250)
                 
+            Spacer()
+                
             }.navigationTitle("My IT Fields")
             
             
