@@ -28,7 +28,7 @@ struct MyITFields: View {
                         .frame(maxWidth: .infinity,alignment: .leading)
                         .padding(.leading, 15)
                     
-                    TabViewFields()
+                    ITFieldsView()
                     
                     Spacer()
                     
