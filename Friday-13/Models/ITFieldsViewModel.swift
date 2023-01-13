@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 struct ITFieldViewModel {
 
     var itFields: [ITField] = [

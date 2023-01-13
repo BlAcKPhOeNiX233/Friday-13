@@ -53,10 +53,52 @@ struct DescriptionView: View {
             }
             .padding(.leading, 17)
             .padding(.trailing, 17)
+            VStack(alignment: .leading){
+                        Text("To become iOS-developer")
+                            .font(.title2)
+                            .fontWeight(.bold)
+                            .padding(.top)
+                        }
+
+                        VStack(alignment: .leading){
+                            HStack{
+                                Image ("ToggleButton")
+                                Text("Easy way")
+                                .fontWeight(.bold)}
+                            Text ("Description of way")
+                                .font(.subheadline)
+                        }
+                        .padding(.leading, -170.0)
+
+                        VStack(alignment: .leading){
+                            HStack{
+                                Image ("ToggleButton")
+                                Text("Medium way")
+                                .fontWeight(.bold)}
+                            Text ("Description of way")
+                                .font(.subheadline)
+
+                        }
+                        .padding(.leading, -170.0)
+
+
+                        VStack(alignment: .leading){
+                            HStack{
+                                Image ("ToggleButton")
+                                Text("Hard way")
+                                .fontWeight(.bold)}
+                            Text ("Description of way")
+                                .font(.subheadline)
+                        }
+                        .padding(.leading, -170.0)
+
+                    }
+            .padding(.top)
+            
         }
-        .padding(.top)
     }
-}
+        
+        
 
 struct DescriptionView_Previews: PreviewProvider {
     static var previews: some View {
