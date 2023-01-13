@@ -8,7 +8,7 @@
 import Foundation
 struct ITFieldViewModel {
 
-    let itFields: [ITField] = [
+    var itFields: [ITField] = [
         
         ITField(
             title: "iOS Developer",
