@@ -9,29 +9,26 @@ import SwiftUI
 
 struct ITFieldsView: View {
     
+    let screenWidth = UIScreen.main.bounds.width
+    let screenHeight = UIScreen.main.bounds.height
+    
     var itFieldViewModel = ITFieldViewModel()
     @State var field: ITField?
     
     var body: some View {
         TabView {
             ForEach(itFieldViewModel.itFields) { field in
-                Button{
-                    self.field = field
-                }label: {
+                NavigationLink(destination: DescriptionView(
+                    title: field.title,
+                    description: field.description,
+                    salary: field.salary,
+                    demand: field.demand
+                )) {
                     Image(field.image)
                         .resizable()
                         .frame(width: 342, height: 235)
                         .foregroundColor(.cyan)
                         .cornerRadius(10)
-                }
-                .sheet(item: $field) {
-                    field in
-                    DescriptionView(
-                        title: field.title,
-                        description: field.description,
-                        salary: field.salary,
-                        demand: field.demand
-                    ).presentationDetents([.medium,.large])
                 }
             }
         }.tabViewStyle(.page(indexDisplayMode: .never)).frame(height: 250)
