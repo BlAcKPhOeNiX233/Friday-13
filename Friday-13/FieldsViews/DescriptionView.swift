@@ -61,7 +61,7 @@ struct DescriptionView: View {
                 
             }
             .navigationTitle(title)
-            .padding(.top)
+            
         }
         }
     }
