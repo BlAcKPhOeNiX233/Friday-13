@@ -9,7 +9,9 @@ import Foundation
 
 struct ITField: Identifiable{
     var id: UUID = UUID()
-    let title: String, image: String, description: String, salary: String, demand: String;
-    let paths: [Path]
-    var percentage: Int?;
+    let title: String
+    var image: String?, description: String?, salary: String?, demand: String?
+    var paths: [Path]?
+    var percentage: Int?
+    var books: Books?
 }

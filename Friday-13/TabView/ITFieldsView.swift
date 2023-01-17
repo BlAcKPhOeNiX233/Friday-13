@@ -13,6 +13,7 @@ struct ITFieldsView: View {
     let screenHeight = UIScreen.main.bounds.height
     
     var itFieldViewModel = ITFieldViewModel()
+    
     @State var field: ITField?
     
     var body: some View {
@@ -20,11 +21,11 @@ struct ITFieldsView: View {
             ForEach(itFieldViewModel.itFields) { field in
                 NavigationLink(destination: DescriptionView(
                     title: field.title,
-                    description: field.description,
-                    salary: field.salary,
-                    demand: field.demand
+                    description: field.description!,
+                    salary: field.salary!,
+                    demand: field.demand!
                 )) {
-                    Image(field.image)
+                    Image(field.image!)
                         .resizable()
                         .frame(width: 342, height: 235)
                         .foregroundColor(.cyan)
