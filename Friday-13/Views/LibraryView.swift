@@ -11,7 +11,19 @@ struct LibraryView: View {
     @StateObject var booksViewModel = BooksViewModel()
     
     var body: some View {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            VStack(alignment: .leading) {
+                ForEach(booksViewModel.itFields) { itField in
+                    Text(itField.title)
+                        .fontWeight(.semibold)
+                        .font(.title2)
+                    
+                }
+                
+                Spacer()
+            }
+            Spacer()
+        }.padding()
     }
 }
 
