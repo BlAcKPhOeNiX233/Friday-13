@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LibraryView: View {
     @StateObject var booksViewModel = BooksViewModel()
+    @State private var showingSheet = false
     
     var body: some View {
         HStack {
@@ -17,14 +18,42 @@ struct LibraryView: View {
                     Text(itField.title)
                         .fontWeight(.semibold)
                         .font(.title2)
+                        .padding()
                     
+                    ScrollView(.horizontal, showsIndicators: false){
+                        HStack(spacing: 16.0) {
+                            Spacer(minLength: 16)
+                            
+                            ForEach(itField.books?.items ?? []) { book in
+                                Button {
+                                    showingSheet.toggle()
+                                } label: {
+                                    AsyncImage(url: URL(
+                                        string: book.volumeInfo.imageLinks?.thumbnail ?? ""
+                                    )) { image in
+                                        image.resizable()
+                                    } placeholder: {
+                                        
+                                    }
+
+                                }.sheet(isPresented: $showingSheet) {
+                                    BookModalView()
+                                }
+                                
+                            }
+                            
+                            Spacer(minLength: 16)
+                        }
+                    }
                 }
                 
                 Spacer()
             }
             Spacer()
-        }.padding()
+        }
     }
+    
+    
 }
 
 struct LibraryView_Previews: PreviewProvider {
