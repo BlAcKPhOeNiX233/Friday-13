@@ -29,7 +29,7 @@ extension LibraryView {
             }
         }
         
-        func getBooks(url: String) async throws -> Books? {
+        func getBooks(url: String) async throws -> Library? {
             
             guard let url = URL(string: url) else {
                 fatalError("Missing URL")
@@ -38,7 +38,7 @@ extension LibraryView {
             do {
                 let (data, _) = try await URLSession.shared.data(from: url)
                 
-                let decodedData = try JSONDecoder().decode(Books.self, from: data)
+                let decodedData = try JSONDecoder().decode(Library.self, from: data)
                 
                 return decodedData
             } catch {
