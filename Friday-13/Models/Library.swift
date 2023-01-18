@@ -19,5 +19,10 @@ struct Library: Decodable {
             let title: String
             let authors: [String]
         }
+        
+        struct ImageLinks: Decodable{
+            let smallThumbnail: String
+            let thumbnail: String
+        }
     }
 }
