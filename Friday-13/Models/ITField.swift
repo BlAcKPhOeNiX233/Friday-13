@@ -13,5 +13,5 @@ struct ITField: Identifiable{
     var image: String?, description: String?, salary: String?, demand: String?
     var paths: [Path]?
     var percentage: Int?
-    var books: Books?
+    var books: Library?
 }

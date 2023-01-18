@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct Books: Decodable {
-    let items: [Item]
+struct Library: Decodable {
+    let items: [Book]
     
-    struct Item: Decodable {
+    struct Book: Decodable {
         let volumeInfo: [VolumeInfo]
         let publisher: String
         let description: String
