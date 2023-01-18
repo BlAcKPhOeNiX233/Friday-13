@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct LibraryView: View {
+    @StateObject var booksViewModel = BooksViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
