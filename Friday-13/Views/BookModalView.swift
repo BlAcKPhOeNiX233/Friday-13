@@ -8,38 +8,40 @@
 import SwiftUI
 
 struct BookModalView: View {
+    let image: String
+    let name: String
+    let author: String
+    let description: String
+    let bookinfo: String
+    
     var body: some View {
         
         ScrollView {
              
             VStack {
-                Image ("Book")
+                Image (image)
                 
                 VStack {
-                    Text ("Make Your First App with Xcode")
+                    Text (name)
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .multilineTextAlignment(.center)
                     
-                    Text ("Roelf Sluman")
+                    Text (author)
                         .font(.title2)
                         .fontWeight(.light)
                         .multilineTextAlignment(.center)
                 }
                 
                 VStack {
-                    Text ("Description")
+                    Text (description)
                         .fontWeight(.bold)
                         .padding(.bottom)
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .padding(.top)
                 
-                Text ("This Starter's Guide teaches you how to use Xcode 10 to create an app. Not only will you get to know Xcode, you will be introduced to many aspects of app design.")
-                    .font(.subheadline)
-                    .padding(.bottom)
-                
-                Text ("You will learn: Navigation within Xcode - Making a template-based app - Adding objects to your app - Views, superviews and subviews - Positioning your views on the screen - Using Auto Layout to make your apps looking consistent across different iOS devices - Including images in your app.")
+                Text (bookinfo)
                     .font(.subheadline)
                     .padding(.bottom)
             }
@@ -50,6 +52,17 @@ struct BookModalView: View {
 
 struct BookModalView_Previews: PreviewProvider {
     static var previews: some View {
-        BookModalView()
+        BookModalView(
+            image: "Book",
+            name: "Make Your First App with Xcode",
+            author: "Roelf Sluman",
+            description: "Description",
+            bookinfo:
+"""
+This Starter's Guide teaches you how to use Xcode 10 to create an app. Not only will you get to know Xcode, you will be introduced to many aspects of app design.
+                      
+You will learn: Navigation within Xcode - Making a template-based app - Adding objects to your app - Views, superviews and subviews - Positioning your views on the screen - Using Auto Layout to make your apps looking consistent across different iOS devices - Including images in your app.
+"""
+        )
     }
 }
