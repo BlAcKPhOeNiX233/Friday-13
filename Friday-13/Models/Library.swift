@@ -16,7 +16,7 @@ struct Library: Decodable {
         
         struct VolumeInfo: Decodable {
             let title: String?
-            let authors: [String?]
+            let authors: [String]?
             let publisher: String?
             let description: String?
             var imageLinks: ImageLinks?

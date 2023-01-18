@@ -10,6 +10,7 @@ import SwiftUI
 struct LibraryView: View {
     @StateObject var booksViewModel = BooksViewModel()
     @State private var showingSheet = false
+    @State var book: Library.Book?
     
     var body: some View {
         HStack {
@@ -21,12 +22,10 @@ struct LibraryView: View {
                         .padding()
                     
                     ScrollView(.horizontal, showsIndicators: false){
-                        HStack(spacing: 16.0) {
-                            Spacer(minLength: 16)
-                            
+                        HStack(spacing: 16) {
                             ForEach(itField.books?.items ?? []) { book in
                                 Button {
-                                    showingSheet.toggle()
+                                    self.book = book
                                 } label: {
                                     AsyncImage(url: URL(
                                         string: book.volumeInfo.imageLinks?.thumbnail ?? ""
@@ -36,14 +35,13 @@ struct LibraryView: View {
                                         
                                     }
 
-                                }.sheet(isPresented: $showingSheet) {
-                                    BookModalView()
+                                }.sheet(item: $book) { book in
+                                    BookModalView(image: book.volumeInfo.imageLinks?.thumbnail ?? "", name: book.volumeInfo.title ?? "", author: book.volumeInfo.authors ?? [""], description: book.volumeInfo.description ?? "")
                                 }
                                 
                             }
                             
-                            Spacer(minLength: 16)
-                        }
+                        }.padding(.horizontal)
                     }
                 }
                 
