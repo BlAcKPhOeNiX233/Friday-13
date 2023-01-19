@@ -142,6 +142,7 @@
 			children = (
 				D3D290CD297051B700745AAE /* DescriptionView.swift */,
 				D3C8543829785DB900D36B34 /* ModalPathView.swift */,
+				57429C71297704290031475D /* BookModalView.swift */,
 			);
 			path = FieldsViews;
 			sourceTree = "<group>";
@@ -162,7 +163,6 @@
 				D35522142975A22800E4A603 /* LibraryView.swift */,
 				A13E679D296F7AF200B46E49 /* MyITField.swift */,
 				57429C6D297701FE0031475D /* HardWayView.swift */,
-				57429C71297704290031475D /* BookModalView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
