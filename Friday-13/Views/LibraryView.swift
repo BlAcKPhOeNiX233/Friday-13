@@ -9,10 +9,49 @@ import SwiftUI
 
 struct LibraryView: View {
     @StateObject var booksViewModel = BooksViewModel()
+    @State private var showingSheet = false
+    @State var book: Library.Book?
     
     var body: some View {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            VStack(alignment: .leading) {
+                ForEach(booksViewModel.itFields) { itField in
+                    Text(itField.title)
+                        .fontWeight(.semibold)
+                        .font(.title2)
+                        .padding()
+                    
+                    ScrollView(.horizontal, showsIndicators: false){
+                        HStack(spacing: 16) {
+                            ForEach(itField.books?.items ?? []) { book in
+                                Button {
+                                    self.book = book
+                                } label: {
+                                    AsyncImage(url: URL(
+                                        string: book.volumeInfo.imageLinks?.thumbnail ?? ""
+                                    )) { image in
+                                        image.resizable()
+                                    } placeholder: {
+                                        
+                                    }
+
+                                }.sheet(item: $book) { book in
+                                    BookModalView(image: book.volumeInfo.imageLinks?.thumbnail ?? "", name: book.volumeInfo.title ?? "", author: book.volumeInfo.authors ?? [""], description: book.volumeInfo.description ?? "")
+                                }
+                                
+                            }
+                            
+                        }.padding(.horizontal)
+                    }
+                }
+                
+                Spacer()
+            }
+            Spacer()
+        }
     }
+    
+    
 }
 
 struct LibraryView_Previews: PreviewProvider {

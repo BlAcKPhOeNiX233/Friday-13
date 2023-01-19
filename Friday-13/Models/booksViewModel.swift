@@ -22,8 +22,11 @@ extension LibraryView {
         func setBooks() async {
             do {
                 try await itFields[0].books = getBooks(url: "https://www.googleapis.com/books/v1/volumes?q=iOS-Development")
+                itFields[0].books?.convertProtocol()
                 try await itFields[1].books = getBooks(url: "https://www.googleapis.com/books/v1/volumes?q=Android-Development")
+                itFields[1].books?.convertProtocol()
                 try await itFields[2].books = getBooks(url: "https://www.googleapis.com/books/v1/volumes?q=Web-Development")
+                itFields[2].books?.convertProtocol()
             } catch {
                 print("Error getting books: \(error.localizedDescription)")
             }
@@ -39,7 +42,7 @@ extension LibraryView {
                 let (data, _) = try await URLSession.shared.data(from: url)
                 
                 let decodedData = try JSONDecoder().decode(Library.self, from: data)
-                
+
                 return decodedData
             } catch {
                 print(error.localizedDescription)
