@@ -8,21 +8,28 @@
 import Foundation
 
 struct Library: Decodable {
-    let items: [Book]
+    var items: [Book]
     
-    struct Book: Decodable {
-        let volumeInfo: [VolumeInfo]
-        let publisher: String
-        let description: String
+    struct Book: Identifiable, Decodable {
+        let id = UUID()
+        var volumeInfo: VolumeInfo
         
         struct VolumeInfo: Decodable {
-            let title: String
-            let authors: [String]
+            let title: String?
+            let authors: [String]?
+            let publisher: String?
+            let description: String?
+            var imageLinks: ImageLinks?
+            
+            struct ImageLinks: Decodable{
+                var thumbnail: String?
+            }
         }
-        
-        struct ImageLinks: Decodable{
-            let smallThumbnail: String
-            let thumbnail: String
+    }
+    
+    mutating func convertProtocol() {
+        for index in 0 ..< items.count {
+            items[index].volumeInfo.imageLinks!.thumbnail = items[index].volumeInfo.imageLinks!.thumbnail!.replacingOccurrences(of: "http", with: "https")
         }
     }
 }
