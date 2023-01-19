@@ -1,45 +1,42 @@
 //
-//  PathButtons.swift
+//  ModalPathView.swift
 //  Friday-13
 //
-//  Created by benedetta on 16/01/23.
+//  Created by benedetta on 17/01/23.
 //
 
 import SwiftUI
 
-struct PathButtons: View {
-    let screenWidth = UIScreen.main.bounds.width
-    let screenHeight = UIScreen.main.bounds.height
-    var varPathButton : Path
+struct ModalPathView: View {
+    @Environment(\.presentationMode)
+    var presentationMode
     
+    var path : Path
     
     var body: some View {
-        
-        VStack
-        {
+        ScrollView {
+        VStack{
+            Text(path.buttonTitle)
+                .bold()
+                .font(.title)
+                .padding(.top, 40)
             
-            
-            ZStack{
-                Text("")
-                    .frame(width: screenWidth-59, height: 54)
-                    .background(.black)
-                    .cornerRadius(16)
-                
-                Text(varPathButton.buttonTitle)
-                    .fontWeight(.semibold)
-                    .foregroundColor(.white)
-                    .frame(width: screenWidth-64, height: 50)
-                    .background(Color("myGrey"))
-                    .cornerRadius(14)
-                
-                
-            }
+            Text(path.descriptionModal)
+                .multilineTextAlignment(.leading)
+                .padding(.leading,16)
+                .padding(.trailing,16)
+                .padding(.top, 0.1)            
+            ChoosePathButton ()
+                .padding(.top)
+            Spacer()
         }
     }
+    }
 }
-struct PathButtons_Previews: PreviewProvider {
+
+struct ModalPathView_Previews: PreviewProvider {
     static var previews: some View {
-        PathButtons(varPathButton: Path(buttonTitle: "Hard way", isSelected: false, descriptionModal:
+        ModalPathView(path: Path(buttonTitle: "Hard way", isSelected: false, descriptionModal:
                         """
                      Decide on the direction and take training in this direction on YouTube channels or free courses to understand whether you like this area or not. Make sure that you cope with this and delve into this matter within a month. Go to good one year courses with mentors and deadlines, and if there is an opportunity not to work for a while, then go to bootcamps for 4 months and be sure to have a mentor (all with employment).
                      

@@ -7,7 +7,12 @@
 
 import Foundation
 
-struct Path {
-    let difficulty: String;
-    let task: [String];
+struct Path: Identifiable {
+    
+    var id: UUID = UUID()
+    var buttonTitle: String
+    var isSelected: Bool
+    var descriptionModal: String
+    var difficulty: String;
+    var task: [String];
 }

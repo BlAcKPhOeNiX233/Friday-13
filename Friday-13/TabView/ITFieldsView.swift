@@ -23,7 +23,8 @@ struct ITFieldsView: View {
                     title: field.title,
                     description: field.description!,
                     salary: field.salary!,
-                    demand: field.demand!
+                    demand: field.demand!,
+                    paths: field.paths!
                 )) {
                     Image(field.image!)
                         .resizable()
