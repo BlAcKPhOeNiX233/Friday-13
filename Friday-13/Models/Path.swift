@@ -8,7 +8,6 @@
 import Foundation
 
 struct Path: Identifiable {
-    
     var id: UUID = UUID()
     var buttonTitle: String
     var isSelected: Bool

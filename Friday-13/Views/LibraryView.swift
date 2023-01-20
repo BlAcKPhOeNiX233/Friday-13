@@ -34,12 +34,10 @@ struct LibraryView: View {
                                             string: book.volumeInfo.imageLinks?.thumbnail ?? ""
                                         )) { image in
                                             image.resizable()
-                                            
                                                 .cornerRadius(7)
                                                 .shadow(radius: 4)
                                         } placeholder: {
                                             ProgressView()
-
                                         }
                                         
                                     }.sheet(item: $book) { book in
