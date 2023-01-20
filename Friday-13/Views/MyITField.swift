@@ -35,11 +35,23 @@ struct MyITFields: View {
                                 demand: field.demand!,
                                 paths: field.paths!
                             )) {
-                                Image(field.image!)
-                                    .resizable()
-                                    .frame(width: 342, height: 235)
-                                    .foregroundColor(.cyan)
-                                    .cornerRadius(10)
+                                ZStack{
+                                    Image(field.image!)
+                                        .resizable()
+                                        .frame(width: 342, height: 235)
+                                        .foregroundColor(.cyan)
+                                        .cornerRadius(10)
+                                   
+                                    ZStack{
+                                        Rectangle()
+                                            .frame(width: 342, height: 50)
+                                            .foregroundColor(Color.black.opacity(0.5))
+                                        Text(field.title)
+                                            .foregroundColor(Color.white)
+                                    }.padding(.top, 190)
+                                    
+                                }
+                                .cornerRadius(10)
                             }
                         }
                     }.tabViewStyle(.page(indexDisplayMode: .never)).frame(height: 250)
