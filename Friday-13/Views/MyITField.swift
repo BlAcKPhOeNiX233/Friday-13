@@ -14,11 +14,12 @@ struct MyITFields: View {
         NavigationStack{
             ZStack{
                 Color("myBackground").ignoresSafeArea()
+                
                 VStack{
                     Text("Choose the field your interested in!")
                         .opacity(0.15)
                         .font(.headline)
-                        .frame(width: 350,height: 240)
+                        .frame(width: 350, height: 240)
                     
                     Text("Other IT Fields")
                         .fontWeight(.semibold)
@@ -49,9 +50,7 @@ struct MyITFields: View {
                                         Text(field.title)
                                             .foregroundColor(Color.white)
                                     }.padding(.top, 190)
-                                    
-                                }
-                                .cornerRadius(10)
+                                }.cornerRadius(10)
                             }
                         }
                     }.tabViewStyle(.page(indexDisplayMode: .never)).frame(height: 250)
@@ -59,12 +58,11 @@ struct MyITFields: View {
                     Spacer()
                     
                 }.navigationTitle("My IT Fields")
-                
             }
-            
         }
     }
 }
+
 struct MyITFields_Previews: PreviewProvider {
     static var previews: some View {
         MyITFields()

@@ -10,16 +10,20 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView{
-        MyITFields().tabItem{
-            Label("MyITFields", systemImage: "macbook.and.iphone").environment( \ .symbolVariants, .none)//fare simboli vuoti nella tab bar
+            MyITFields().tabItem{
+                Label(
+                    "MyITFields",
+                    systemImage: "macbook.and.iphone"
+                ).environment(\.symbolVariants, .none)//fare simboli vuoti nella tab bar
+            }
+            
+            LibraryView().tabItem{
+                Label(
+                    "Library",
+                    systemImage: "books.vertical"
+                ).environment( \ .symbolVariants, .none)
+            }
         }
-        
-        
-        LibraryView().tabItem{
-            Label("Library", systemImage: "books.vertical")
-                .environment( \ .symbolVariants, .none)
-        }
-    }
     }
 }
 

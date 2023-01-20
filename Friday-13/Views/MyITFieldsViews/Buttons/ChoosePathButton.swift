@@ -10,12 +10,10 @@ import SwiftUI
 struct ChoosePathButton: View {
     let screenWidth = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.height
+    
     var body: some View {
-
-        VStack
-        {
+        VStack {
             ZStack{
-
                 Text("")
                     .frame(width: screenWidth-129, height: 44)
                     .background(.black)

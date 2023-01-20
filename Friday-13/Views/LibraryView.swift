@@ -16,44 +16,49 @@ struct LibraryView: View {
         NavigationStack{
             ZStack{
                 Color("myBackground").ignoresSafeArea()
+                
                 ScrollView{
-                VStack(alignment: .leading) {
-                    ForEach(booksViewModel.itFields) { itField in
-                        Text(itField.title)
-                            .fontWeight(.semibold)
-                            .font(.title2)
-                            .padding()
-                        
-                        ScrollView(.horizontal, showsIndicators: false){
-                            HStack(spacing: 16) {
-                                ForEach(itField.books?.items ?? []) { book in
-                                    Button {
-                                        self.book = book
-                                    } label: {
-                                        AsyncImage(url: URL(
-                                            string: book.volumeInfo.imageLinks?.thumbnail ?? ""
-                                        )) { image in
-                                            image.resizable()
-                                                .cornerRadius(7)
-                                                .shadow(radius: 4)
-                                        } placeholder: {
-                                            ProgressView()
+                    VStack(alignment: .leading) {
+                        ForEach(booksViewModel.itFields) { itField in
+                            Text(itField.title)
+                                .fontWeight(.semibold)
+                                .font(.title2)
+                                .padding()
+                            
+                            ScrollView(.horizontal, showsIndicators: false){
+                                HStack(spacing: 16) {
+                                    ForEach(itField.books?.items ?? []) { book in
+                                        Button {
+                                            self.book = book
+                                        } label: {
+                                            AsyncImage(url: URL(
+                                                string: book.volumeInfo.imageLinks?.thumbnail ?? ""
+                                            )) { image in
+                                                image
+                                                    .resizable()
+                                                    .cornerRadius(7)
+                                                    .shadow(radius: 4)
+                                            } placeholder: {
+                                                ProgressView()
+                                            }
+                                        }.sheet(item: $book) { book in
+                                            BookModalView(
+                                                image: book.volumeInfo.imageLinks?.thumbnail ?? "",
+                                                name: book.volumeInfo.title ?? "",
+                                                author: book.volumeInfo.authors ?? [""],
+                                                description: book.volumeInfo.description ?? "")
                                         }
                                         
-                                    }.sheet(item: $book) { book in
-                                        BookModalView(image: book.volumeInfo.imageLinks?.thumbnail ?? "", name: book.volumeInfo.title ?? "", author: book.volumeInfo.authors ?? [""], description: book.volumeInfo.description ?? "")
                                     }
                                     
-                                }
-                                
-                            }.padding(.horizontal)
+                                }.padding(.horizontal)
+                            }
                         }
+                        
+                        Spacer()
                     }
-                    
-                    Spacer()
                 }
-            }
-        }.navigationTitle("Library")
+            }.navigationTitle("Library")
         }
     }
 }

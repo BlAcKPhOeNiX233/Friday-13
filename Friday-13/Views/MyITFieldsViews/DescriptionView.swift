@@ -8,12 +8,10 @@
 import SwiftUI
 
 struct DescriptionView: View {
-    
     let screenWidth = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.height
-    @State private var isSelected = false
+    
     @State private var selectedPath: Path?
-  //  var varPathButton : Path
     
     var title: String
     var description: String
@@ -22,63 +20,51 @@ struct DescriptionView: View {
     var paths: [Path]
     
     @ObservedObject var varPathButtonVM = ITFieldViewModel()
-    //@State private var selectedPath: Path?
     
     var body: some View {
         ZStack{
             Color("myBackground").ignoresSafeArea()
             ScrollView {
-                
-                VStack{
-                    VStack(alignment: .leading){
-                        
-                        Text ("Description")
+                VStack {
+                    VStack(alignment: .leading) {
+                        Text("Description")
                             .fontWeight(.bold)
                             .padding(.bottom)
                         
                         
-                        Text (description)
+                        Text(description)
                             .font(.subheadline)
                             .padding(.bottom)
                             .lineLimit(.max)
                         
                         
-                        Text ("Salary")
+                        Text("Salary")
                             .fontWeight(.bold)
                             .padding(.vertical)
                         
                         
-                        Text (salary)
-                            .font(.subheadline)
+                        Text(salary).font(.subheadline)
                         
-                        Text ("Demand")
+                        Text("Demand")
                             .fontWeight(.bold)
                             .padding(.vertical)
                         
-                        Text (demand)
-                            .font(.subheadline)
-                    }
-                    .padding(.leading, 17)
-                    .padding(.trailing, 17)
+                        Text(demand).font(.subheadline)
+                    }.padding(.horizontal, 17)
+                    
                     VStack(alignment: .leading){
                         Text("To become \(title)")
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.top)
-                        
                     }
-                    
                     
                     ForEach(paths){ path in
                         Button{
-                            isSelected.toggle()
                             selectedPath = path
                         } label: {
-                            VStack
-                            {
-                                
-                                
-                                ZStack{
+                            VStack {
+                                ZStack {
                                     Text("")
                                         .frame(width: screenWidth-59, height: 54)
                                         .background(.black)
@@ -90,31 +76,14 @@ struct DescriptionView: View {
                                         .frame(width: screenWidth-64, height: 50)
                                         .background(Color("myGrey"))
                                         .cornerRadius(14)
-                                    
-                                    
                                 }
                             }
-
-                        }.sheet(item: $selectedPath)
-                        {
-                            selectedPath in
+                        }.sheet(item: $selectedPath) { selectedPath in
                             ModalPathView(path: selectedPath)
                         }
-                }
-                     
-                     
-                    
-                }
-                .padding(.bottom)
-
-                
-            }
-            
-            .navigationTitle(title)
-            
-        }
+                    }
+                }.padding(.bottom)
+            }.navigationTitle(title)
         }
     }
-        
-        
-
+}

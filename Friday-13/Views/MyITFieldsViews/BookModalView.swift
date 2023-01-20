@@ -14,28 +14,26 @@ struct BookModalView: View {
     let description: String
     
     var body: some View {
-        
-        ScrollView(showsIndicators: false){
-            
+        ScrollView(showsIndicators: false) {
             VStack {
                 AsyncImage(url: URL(string: image)) { image in
-                    image.resizable()
+                    image
+                        .resizable()
                         .frame(width: 200)
                         .scaledToFit()
                         .cornerRadius(7)
                         .shadow(radius: 4)
-                        
                 } placeholder: {
                     ProgressView()
                 }
                 
                 VStack {
-                    Text (name)
+                    Text(name)
                         .font(.title)
                         .fontWeight(.bold)
                         .multilineTextAlignment(.center)
                     
-                    Text (author.joined(separator: ", "))
+                    Text(author.joined(separator: ", "))
                         .font(.title2)
                         .fontWeight(.light)
                         .multilineTextAlignment(.center)
@@ -43,15 +41,11 @@ struct BookModalView: View {
                 
                 VStack {
                     Text (description)
-                       // .fontWeight(.bold)
                         .padding(.bottom)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                }
-                .padding(.top)
-            }
-            .padding(.horizontal,50)
-        }
-        .padding(.top)
+                }.padding(.top)
+            }.padding(.horizontal,50)
+        }.padding(.top)
     }
 }
 

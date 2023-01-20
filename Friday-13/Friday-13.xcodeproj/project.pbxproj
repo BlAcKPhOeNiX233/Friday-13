@@ -153,10 +153,10 @@
 		D35E96EE29758B3700B6E235 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D318C5DC2975857D00019945 /* MyITFieldsViews */,
 				A1247745296EF24D005579CB /* ContentView.swift */,
 				A13E679D296F7AF200B46E49 /* MyITField.swift */,
 				D35522142975A22800E4A603 /* LibraryView.swift */,
-				D318C5DC2975857D00019945 /* MyITFieldsViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
