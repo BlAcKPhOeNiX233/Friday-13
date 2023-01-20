@@ -58,8 +58,6 @@ struct LibraryView: View {
         }.navigationTitle("Library")
         }
     }
-    
-    
 }
 
 struct LibraryView_Previews: PreviewProvider {

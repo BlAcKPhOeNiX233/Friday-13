@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct MyITFields: View {
+    var itFieldViewModel = ITFieldViewModel()
+    
     var body: some View {
         NavigationStack{
-            
             ZStack{
                 Color("myBackground").ignoresSafeArea()
                 VStack{
@@ -19,15 +20,29 @@ struct MyITFields: View {
                         .font(.headline)
                         .frame(width: 350,height: 240)
                     
-                    
-                    
                     Text("Other IT Fields")
                         .fontWeight(.semibold)
                         .font(.title2)
                         .frame(maxWidth: .infinity,alignment: .leading)
                         .padding(.leading, 15)
                     
-                    ITFieldsView()
+                    TabView {
+                        ForEach(itFieldViewModel.itFields) { field in
+                            NavigationLink(destination: DescriptionView(
+                                title: field.title,
+                                description: field.description!,
+                                salary: field.salary!,
+                                demand: field.demand!,
+                                paths: field.paths!
+                            )) {
+                                Image(field.image!)
+                                    .resizable()
+                                    .frame(width: 342, height: 235)
+                                    .foregroundColor(.cyan)
+                                    .cornerRadius(10)
+                            }
+                        }
+                    }.tabViewStyle(.page(indexDisplayMode: .never)).frame(height: 250)
                     
                     Spacer()
                     

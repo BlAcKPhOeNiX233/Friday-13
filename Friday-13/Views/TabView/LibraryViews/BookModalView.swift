@@ -16,7 +16,7 @@ struct BookModalView: View {
     var body: some View {
         
         ScrollView(showsIndicators: false){
-             
+            
             VStack {
                 AsyncImage(url: URL(string: image)) { image in
                     image.resizable()

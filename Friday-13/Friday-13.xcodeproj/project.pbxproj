@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		15BE132029706A590082A0C4 /* ITFieldsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BE131F29706A580082A0C4 /* ITFieldsViewModel.swift */; };
-		57429C6E297701FE0031475D /* HardWayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57429C6D297701FE0031475D /* HardWayView.swift */; };
 		57429C702977036A0031475D /* ChoosePathButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57429C6F2977036A0031475D /* ChoosePathButton.swift */; };
 		57429C72297704290031475D /* BookModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57429C71297704290031475D /* BookModalView.swift */; };
 		A1247746296EF24D005579CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1247745296EF24D005579CB /* ContentView.swift */; };
@@ -22,7 +21,6 @@
 		A1CC8ED6297061D6005B7A65 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CC8ED5297061D6005B7A65 /* Path.swift */; };
 		D318C5E129758A5400019945 /* PathButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D318C5E029758A5400019945 /* PathButtons.swift */; };
 		D35522152975A22900E4A603 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35522142975A22800E4A603 /* LibraryView.swift */; };
-		D3BA136E29704CB700C942B9 /* ITFieldsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BA136D29704CB700C942B9 /* ITFieldsView.swift */; };
 		D3C8543929785DB900D36B34 /* ModalPathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C8543829785DB900D36B34 /* ModalPathView.swift */; };
 		D3D290CE297051B700745AAE /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D290CD297051B700745AAE /* DescriptionView.swift */; };
 /* End PBXBuildFile section */
@@ -46,7 +44,6 @@
 
 /* Begin PBXFileReference section */
 		15BE131F29706A580082A0C4 /* ITFieldsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITFieldsViewModel.swift; sourceTree = "<group>"; };
-		57429C6D297701FE0031475D /* HardWayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardWayView.swift; sourceTree = "<group>"; };
 		57429C6F2977036A0031475D /* ChoosePathButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePathButton.swift; sourceTree = "<group>"; };
 		57429C71297704290031475D /* BookModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModalView.swift; sourceTree = "<group>"; };
 		A1247740296EF24D005579CB /* Friday-13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Friday-13.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,7 +60,6 @@
 		A1CC8ED5297061D6005B7A65 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		D318C5E029758A5400019945 /* PathButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathButtons.swift; sourceTree = "<group>"; };
 		D35522142975A22800E4A603 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
-		D3BA136D29704CB700C942B9 /* ITFieldsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITFieldsView.swift; sourceTree = "<group>"; };
 		D3C8543829785DB900D36B34 /* ModalPathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalPathView.swift; sourceTree = "<group>"; };
 		D3D290CD297051B700745AAE /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,10 +94,6 @@
 			children = (
 				A13E6799296F7AF200B46E49 /* Friday_13App.swift */,
 				A133CD1D297041B100EA846C /* Models */,
-				D3C85437297857A300D36B34 /* ViewModels */,
-				D318C5DF29758A3D00019945 /* Buttons */,
-				D318C5DC2975857D00019945 /* FieldsViews */,
-				D35E96EF29758B8D00B6E235 /* TabView */,
 				D35E96EE29758B3700B6E235 /* Views */,
 				A13E679A296F7AF200B46E49 /* Assets.xcassets */,
 				A1247749296EF24E005579CB /* Preview Content */,
@@ -130,6 +122,7 @@
 		A133CD1D297041B100EA846C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D3C85437297857A300D36B34 /* ViewModels */,
 				A133CD1E297041DD00EA846C /* ITField.swift */,
 				A1CC8ED5297061D6005B7A65 /* Path.swift */,
 				A13339052978302D00BC720A /* Library.swift */,
@@ -137,14 +130,24 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		D318C5DC2975857D00019945 /* FieldsViews */ = {
+		A140F5A8297ACF270059F59C /* LibraryViews */ = {
 			isa = PBXGroup;
 			children = (
-				D3D290CD297051B700745AAE /* DescriptionView.swift */,
-				D3C8543829785DB900D36B34 /* ModalPathView.swift */,
+				D35522142975A22800E4A603 /* LibraryView.swift */,
 				57429C71297704290031475D /* BookModalView.swift */,
 			);
-			path = FieldsViews;
+			path = LibraryViews;
+			sourceTree = "<group>";
+		};
+		D318C5DC2975857D00019945 /* MyITFieldsViews */ = {
+			isa = PBXGroup;
+			children = (
+				D318C5DF29758A3D00019945 /* Buttons */,
+				A13E679D296F7AF200B46E49 /* MyITField.swift */,
+				D3D290CD297051B700745AAE /* DescriptionView.swift */,
+				D3C8543829785DB900D36B34 /* ModalPathView.swift */,
+			);
+			path = MyITFieldsViews;
 			sourceTree = "<group>";
 		};
 		D318C5DF29758A3D00019945 /* Buttons */ = {
@@ -159,10 +162,8 @@
 		D35E96EE29758B3700B6E235 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D35E96EF29758B8D00B6E235 /* TabView */,
 				A1247745296EF24D005579CB /* ContentView.swift */,
-				D35522142975A22800E4A603 /* LibraryView.swift */,
-				A13E679D296F7AF200B46E49 /* MyITField.swift */,
-				57429C6D297701FE0031475D /* HardWayView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -170,7 +171,8 @@
 		D35E96EF29758B8D00B6E235 /* TabView */ = {
 			isa = PBXGroup;
 			children = (
-				D3BA136D29704CB700C942B9 /* ITFieldsView.swift */,
+				D318C5DC2975857D00019945 /* MyITFieldsViews */,
+				A140F5A8297ACF270059F59C /* LibraryViews */,
 			);
 			path = TabView;
 			sourceTree = "<group>";
@@ -314,13 +316,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3BA136E29704CB700C942B9 /* ITFieldsView.swift in Sources */,
 				A1CC8ED6297061D6005B7A65 /* Path.swift in Sources */,
 				A13339062978302D00BC720A /* Library.swift in Sources */,
 				D3C8543929785DB900D36B34 /* ModalPathView.swift in Sources */,
 				15BE132029706A590082A0C4 /* ITFieldsViewModel.swift in Sources */,
 				A13E67A2296F7AF200B46E49 /* MyITField.swift in Sources */,
-				57429C6E297701FE0031475D /* HardWayView.swift in Sources */,
 				D318C5E129758A5400019945 /* PathButtons.swift in Sources */,
 				57429C72297704290031475D /* BookModalView.swift in Sources */,
 				A133CD1F297041DD00EA846C /* ITField.swift in Sources */,
