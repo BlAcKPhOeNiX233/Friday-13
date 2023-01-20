@@ -94,6 +94,9 @@
 			children = (
 				A13E6799296F7AF200B46E49 /* Friday_13App.swift */,
 				A133CD1D297041B100EA846C /* Models */,
+				D3C85437297857A300D36B34 /* ViewModels */,
+				D318C5DF29758A3D00019945 /* Buttons */,
+				D318C5DC2975857D00019945 /* MyITFieldsViews */,
 				D35E96EE29758B3700B6E235 /* Views */,
 				A13E679A296F7AF200B46E49 /* Assets.xcassets */,
 				A1247749296EF24E005579CB /* Preview Content */,
@@ -122,7 +125,6 @@
 		A133CD1D297041B100EA846C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D3C85437297857A300D36B34 /* ViewModels */,
 				A133CD1E297041DD00EA846C /* ITField.swift */,
 				A1CC8ED5297061D6005B7A65 /* Path.swift */,
 				A13339052978302D00BC720A /* Library.swift */,
@@ -130,22 +132,12 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		A140F5A8297ACF270059F59C /* LibraryViews */ = {
-			isa = PBXGroup;
-			children = (
-				D35522142975A22800E4A603 /* LibraryView.swift */,
-				57429C71297704290031475D /* BookModalView.swift */,
-			);
-			path = LibraryViews;
-			sourceTree = "<group>";
-		};
 		D318C5DC2975857D00019945 /* MyITFieldsViews */ = {
 			isa = PBXGroup;
 			children = (
-				D318C5DF29758A3D00019945 /* Buttons */,
-				A13E679D296F7AF200B46E49 /* MyITField.swift */,
 				D3D290CD297051B700745AAE /* DescriptionView.swift */,
 				D3C8543829785DB900D36B34 /* ModalPathView.swift */,
+				57429C71297704290031475D /* BookModalView.swift */,
 			);
 			path = MyITFieldsViews;
 			sourceTree = "<group>";
@@ -162,19 +154,11 @@
 		D35E96EE29758B3700B6E235 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D35E96EF29758B8D00B6E235 /* TabView */,
 				A1247745296EF24D005579CB /* ContentView.swift */,
+				A13E679D296F7AF200B46E49 /* MyITField.swift */,
+				D35522142975A22800E4A603 /* LibraryView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		D35E96EF29758B8D00B6E235 /* TabView */ = {
-			isa = PBXGroup;
-			children = (
-				D318C5DC2975857D00019945 /* MyITFieldsViews */,
-				A140F5A8297ACF270059F59C /* LibraryViews */,
-			);
-			path = TabView;
 			sourceTree = "<group>";
 		};
 		D3C85437297857A300D36B34 /* ViewModels */ = {
