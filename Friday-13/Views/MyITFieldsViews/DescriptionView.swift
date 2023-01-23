@@ -10,75 +10,57 @@ import SwiftUI
 struct DescriptionView: View {
     let screenWidth = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.height
-    
     @State private var selectedPath: Path?
-    
     var title: String
     var description: String
     var salary: String
     var demand: String
     var paths: [Path]
-    
     @ObservedObject var varPathButtonVM = ITFieldViewModel()
-    
     var body: some View {
-        ZStack{
+        ZStack {
             Color("myBackground").ignoresSafeArea()
             ScrollView {
                 VStack {
                     VStack(alignment: .leading) {
                         Text("Description")
                             .fontWeight(.bold)
-                            .padding(.bottom)
-                        
-                        
                         Text(description)
                             .font(.subheadline)
+                            .padding(.top, 1)
                             .padding(.bottom)
                             .lineLimit(.max)
-                        
-                        
                         Text("Salary")
                             .fontWeight(.bold)
-                            .padding(.vertical)
-                        
-                        
-                        Text(salary).font(.subheadline)
-                        
+                        Text(salary)
+                            .font(.subheadline)
+                            .padding(.top, 1)
+                            .padding(.bottom)
                         Text("Demand")
                             .fontWeight(.bold)
-                            .padding(.vertical)
-                        
-                        Text(demand).font(.subheadline)
+                        Text(demand)
+                            .font(.subheadline)
+                            .padding(.top, 1)
+                            .padding(.bottom)
                     }.padding(.horizontal, 17)
-                    
-                    VStack(alignment: .leading){
+                    VStack(alignment: .leading) {
                         Text("To become \(title)")
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.top)
                     }
-                    
-                    ForEach(paths){ path in
-                        Button{
+                    ForEach(paths) { path in
+                        Button {
                             selectedPath = path
                         } label: {
-                            VStack {
-                                ZStack {
-                                    Text("")
-                                        .frame(width: screenWidth-59, height: 54)
-                                        .background(.black)
-                                        .cornerRadius(16)
-                                    
-                                    Text(path.buttonTitle)
-                                        .fontWeight(.semibold)
-                                        .foregroundColor(.white)
-                                        .frame(width: screenWidth-64, height: 50)
-                                        .background(Color("myGrey"))
-                                        .cornerRadius(14)
-                                }
-                            }
-                        }.sheet(item: $selectedPath) { selectedPath in
+                            Text(path.buttonTitle)
+                                .fontWeight(.semibold)
+                                .font(.system(size: 17))
+                                .frame(width: 300, height: 30)
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .tint(Color(.systemGray))
+                        .sheet(item: $selectedPath) { selectedPath in
                             ModalPathView(path: selectedPath)
                         }
                     }

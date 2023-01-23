@@ -11,21 +11,18 @@ struct LibraryView: View {
     @StateObject var booksViewModel = BooksViewModel()
     @State private var showingSheet = false
     @State var book: Library.Book?
-    
     var body: some View {
-        NavigationStack{
-            ZStack{
+        NavigationStack {
+            ZStack {
                 Color("myBackground").ignoresSafeArea()
-                
-                ScrollView{
+                ScrollView {
                     VStack(alignment: .leading) {
                         ForEach(booksViewModel.itFields) { itField in
                             Text(itField.title)
                                 .fontWeight(.semibold)
                                 .font(.title2)
                                 .padding()
-                            
-                            ScrollView(.horizontal, showsIndicators: false){
+                            ScrollView(.horizontal, showsIndicators: false) {
                                 HStack(spacing: 16) {
                                     ForEach(itField.books?.items ?? []) { book in
                                         Button {
@@ -48,13 +45,10 @@ struct LibraryView: View {
                                                 author: book.volumeInfo.authors ?? [""],
                                                 description: book.volumeInfo.description ?? "")
                                         }
-                                        
                                     }
-                                    
                                 }.padding(.horizontal)
                             }
                         }
-                        
                         Spacer()
                     }
                 }

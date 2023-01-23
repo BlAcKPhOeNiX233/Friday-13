@@ -13,7 +13,7 @@ struct Library: Decodable {
     struct Book: Identifiable, Decodable {
         let id = UUID()
         var volumeInfo: VolumeInfo
-        
+    
         struct VolumeInfo: Decodable {
             let title: String?
             let authors: [String]?
