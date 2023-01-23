@@ -10,9 +10,7 @@ import SwiftUI
 struct ModalPathView: View {
     @Environment(\.presentationMode)
     var presentationMode
-    
-    var path : Path
-    
+    var path: Path
     var body: some View {
         ScrollView {
             VStack {
@@ -20,15 +18,20 @@ struct ModalPathView: View {
                     .bold()
                     .font(.title)
                     .padding(.top, 40)
-                
                 Text(path.descriptionModal)
                     .multilineTextAlignment(.leading)
-                    .padding(.leading,16)
-                    .padding(.trailing,16)
+                    .padding(.leading, 16)
+                    .padding(.trailing, 16)
                     .padding(.top, 0.1)
-                
-                ChoosePathButton().padding(.top)
-                
+                Button {
+                } label: {
+                    Text(path.buttonTitle)
+                        .fontWeight(.semibold)
+                        .font(.system(size: 17))
+                        .frame(width: 300, height: 30)
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(Color(.systemGray))
                 Spacer()
             }
         }

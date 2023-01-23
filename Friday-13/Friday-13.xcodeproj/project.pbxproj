@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		15BE132029706A590082A0C4 /* ITFieldsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BE131F29706A580082A0C4 /* ITFieldsViewModel.swift */; };
-		57429C702977036A0031475D /* ChoosePathButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57429C6F2977036A0031475D /* ChoosePathButton.swift */; };
 		57429C72297704290031475D /* BookModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57429C71297704290031475D /* BookModalView.swift */; };
 		A1247746296EF24D005579CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1247745296EF24D005579CB /* ContentView.swift */; };
 		A124774B296EF24E005579CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A124774A296EF24E005579CB /* Preview Assets.xcassets */; };
@@ -19,7 +18,6 @@
 		A13E67A2296F7AF200B46E49 /* MyITField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13E679D296F7AF200B46E49 /* MyITField.swift */; };
 		A1800F2A2975AE05002EC6EE /* booksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1800F292975AE05002EC6EE /* booksViewModel.swift */; };
 		A1CC8ED6297061D6005B7A65 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CC8ED5297061D6005B7A65 /* Path.swift */; };
-		D318C5E129758A5400019945 /* PathButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D318C5E029758A5400019945 /* PathButtons.swift */; };
 		D35522152975A22900E4A603 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35522142975A22800E4A603 /* LibraryView.swift */; };
 		D3C8543929785DB900D36B34 /* ModalPathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C8543829785DB900D36B34 /* ModalPathView.swift */; };
 		D3D290CE297051B700745AAE /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D290CD297051B700745AAE /* DescriptionView.swift */; };
@@ -44,7 +42,6 @@
 
 /* Begin PBXFileReference section */
 		15BE131F29706A580082A0C4 /* ITFieldsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITFieldsViewModel.swift; sourceTree = "<group>"; };
-		57429C6F2977036A0031475D /* ChoosePathButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePathButton.swift; sourceTree = "<group>"; };
 		57429C71297704290031475D /* BookModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModalView.swift; sourceTree = "<group>"; };
 		A1247740296EF24D005579CB /* Friday-13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Friday-13.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1247745296EF24D005579CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,7 +55,6 @@
 		A13E679D296F7AF200B46E49 /* MyITField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyITField.swift; sourceTree = "<group>"; };
 		A1800F292975AE05002EC6EE /* booksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = booksViewModel.swift; sourceTree = "<group>"; };
 		A1CC8ED5297061D6005B7A65 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
-		D318C5E029758A5400019945 /* PathButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathButtons.swift; sourceTree = "<group>"; };
 		D35522142975A22800E4A603 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		D3C8543829785DB900D36B34 /* ModalPathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalPathView.swift; sourceTree = "<group>"; };
 		D3D290CD297051B700745AAE /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
@@ -133,21 +129,11 @@
 		D318C5DC2975857D00019945 /* MyITFieldsViews */ = {
 			isa = PBXGroup;
 			children = (
-				D318C5DF29758A3D00019945 /* Buttons */,
 				D3D290CD297051B700745AAE /* DescriptionView.swift */,
 				D3C8543829785DB900D36B34 /* ModalPathView.swift */,
 				57429C71297704290031475D /* BookModalView.swift */,
 			);
 			path = MyITFieldsViews;
-			sourceTree = "<group>";
-		};
-		D318C5DF29758A3D00019945 /* Buttons */ = {
-			isa = PBXGroup;
-			children = (
-				D318C5E029758A5400019945 /* PathButtons.swift */,
-				57429C6F2977036A0031475D /* ChoosePathButton.swift */,
-			);
-			path = Buttons;
 			sourceTree = "<group>";
 		};
 		D35E96EE29758B3700B6E235 /* Views */ = {
@@ -327,10 +313,8 @@
 				D3C8543929785DB900D36B34 /* ModalPathView.swift in Sources */,
 				15BE132029706A590082A0C4 /* ITFieldsViewModel.swift in Sources */,
 				A13E67A2296F7AF200B46E49 /* MyITField.swift in Sources */,
-				D318C5E129758A5400019945 /* PathButtons.swift in Sources */,
 				57429C72297704290031475D /* BookModalView.swift in Sources */,
 				A133CD1F297041DD00EA846C /* ITField.swift in Sources */,
-				57429C702977036A0031475D /* ChoosePathButton.swift in Sources */,
 				D3D290CE297051B700745AAE /* DescriptionView.swift in Sources */,
 				A1247746296EF24D005579CB /* ContentView.swift in Sources */,
 				D35522152975A22900E4A603 /* LibraryView.swift in Sources */,
