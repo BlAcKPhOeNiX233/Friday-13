@@ -7,11 +7,12 @@
 
 import Foundation
 
-struct ITField: Identifiable{
+struct ITField: Identifiable {
     var id: UUID = UUID()
     let title: String
     var image: String?, description: String?, salary: String?, demand: String?
     var paths: [Path]?
     var percentage: Int?
     var books: Library?
+    var isSelected = false
 }

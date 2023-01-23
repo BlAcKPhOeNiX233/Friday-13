@@ -23,15 +23,6 @@ struct ModalPathView: View {
                     .padding(.leading, 16)
                     .padding(.trailing, 16)
                     .padding(.top, 0.1)
-                Button {
-                } label: {
-                    Text(path.buttonTitle)
-                        .fontWeight(.semibold)
-                        .font(.system(size: 17))
-                        .frame(width: 300, height: 30)
-                }
-                .buttonStyle(.borderedProminent)
-                .tint(Color(.systemGray))
                 Spacer()
             }
         }

@@ -9,19 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        TabView{
-            MyITFields().tabItem{
+        TabView {
+            MyITFieldsView().tabItem {
                 Label(
                     "MyITFields",
                     systemImage: "macbook.and.iphone"
-                ).environment(\.symbolVariants, .none)//fare simboli vuoti nella tab bar
+                ).environment(\.symbolVariants, .none) // fare simboli vuoti nella tab bar
             }
-            
-            LibraryView().tabItem{
+            LibraryView().tabItem {
                 Label(
                     "Library",
                     systemImage: "books.vertical"
-                ).environment( \ .symbolVariants, .none)
+                ).environment(\.symbolVariants, .none)
             }
         }
     }

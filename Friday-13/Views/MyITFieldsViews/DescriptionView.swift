@@ -8,16 +8,15 @@
 import SwiftUI
 
 struct DescriptionView: View {
-    let screenWidth = UIScreen.main.bounds.width
-    let screenHeight = UIScreen.main.bounds.height
     @State private var selectedPath: Path?
     var title: String
     var description: String
     var salary: String
     var demand: String
     var paths: [Path]
-    @ObservedObject var varPathButtonVM = ITFieldViewModel()
-    var body: some View {
+    var position: Int
+    var change: (Int) -> Void
+     var body: some View {
         ZStack {
             Color("myBackground").ignoresSafeArea()
             ScrollView {
@@ -65,7 +64,17 @@ struct DescriptionView: View {
                         }
                     }
                 }.padding(.bottom)
-            }.navigationTitle(title)
+            }
+            .navigationTitle(title)
+            .toolbar {
+                ToolbarItem {
+                    Button {
+                        change(position)
+                    } label: {
+                        Image(systemName: "plus.app")
+                    }
+                }
+            }
         }
     }
 }
