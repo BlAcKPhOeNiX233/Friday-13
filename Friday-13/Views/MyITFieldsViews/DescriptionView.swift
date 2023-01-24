@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DescriptionView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State private var selectedPath: Path?
     var title: String
     var description: String
@@ -71,6 +72,7 @@ struct DescriptionView: View {
                 ToolbarItem {
                     Button {
                         change(position)
+                        presentationMode.wrappedValue.dismiss()
                     } label: {
                         Image(systemName: isSelected ? "minus.square" : "plus.app")
                     }
