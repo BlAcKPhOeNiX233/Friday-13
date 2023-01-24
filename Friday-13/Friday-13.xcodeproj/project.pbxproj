@@ -15,7 +15,7 @@
 		A133CD1F297041DD00EA846C /* ITField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A133CD1E297041DD00EA846C /* ITField.swift */; };
 		A13E679F296F7AF200B46E49 /* Friday_13App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13E6799296F7AF200B46E49 /* Friday_13App.swift */; };
 		A13E67A0296F7AF200B46E49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A13E679A296F7AF200B46E49 /* Assets.xcassets */; };
-		A13E67A2296F7AF200B46E49 /* MyITField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13E679D296F7AF200B46E49 /* MyITField.swift */; };
+		A13E67A2296F7AF200B46E49 /* MyITFieldsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13E679D296F7AF200B46E49 /* MyITFieldsView.swift */; };
 		A1800F2A2975AE05002EC6EE /* booksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1800F292975AE05002EC6EE /* booksViewModel.swift */; };
 		A1CC8ED6297061D6005B7A65 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CC8ED5297061D6005B7A65 /* Path.swift */; };
 		D35522152975A22900E4A603 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35522142975A22800E4A603 /* LibraryView.swift */; };
@@ -52,7 +52,7 @@
 		A133CD1E297041DD00EA846C /* ITField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITField.swift; sourceTree = "<group>"; };
 		A13E6799296F7AF200B46E49 /* Friday_13App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friday_13App.swift; sourceTree = "<group>"; };
 		A13E679A296F7AF200B46E49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A13E679D296F7AF200B46E49 /* MyITField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyITField.swift; sourceTree = "<group>"; };
+		A13E679D296F7AF200B46E49 /* MyITFieldsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyITFieldsView.swift; sourceTree = "<group>"; };
 		A1800F292975AE05002EC6EE /* booksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = booksViewModel.swift; sourceTree = "<group>"; };
 		A1CC8ED5297061D6005B7A65 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		D35522142975A22800E4A603 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
@@ -126,12 +126,21 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		A1A6D6EB297EDC1A0065DD19 /* LibraryViews */ = {
+			isa = PBXGroup;
+			children = (
+				D35522142975A22800E4A603 /* LibraryView.swift */,
+				57429C71297704290031475D /* BookModalView.swift */,
+			);
+			path = LibraryViews;
+			sourceTree = "<group>";
+		};
 		D318C5DC2975857D00019945 /* MyITFieldsViews */ = {
 			isa = PBXGroup;
 			children = (
 				D3D290CD297051B700745AAE /* DescriptionView.swift */,
 				D3C8543829785DB900D36B34 /* ModalPathView.swift */,
-				57429C71297704290031475D /* BookModalView.swift */,
+				A13E679D296F7AF200B46E49 /* MyITFieldsView.swift */,
 			);
 			path = MyITFieldsViews;
 			sourceTree = "<group>";
@@ -140,9 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				D318C5DC2975857D00019945 /* MyITFieldsViews */,
+				A1A6D6EB297EDC1A0065DD19 /* LibraryViews */,
 				A1247745296EF24D005579CB /* ContentView.swift */,
-				A13E679D296F7AF200B46E49 /* MyITField.swift */,
-				D35522142975A22800E4A603 /* LibraryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -312,7 +320,7 @@
 				A13339062978302D00BC720A /* Library.swift in Sources */,
 				D3C8543929785DB900D36B34 /* ModalPathView.swift in Sources */,
 				15BE132029706A590082A0C4 /* ITFieldsViewModel.swift in Sources */,
-				A13E67A2296F7AF200B46E49 /* MyITField.swift in Sources */,
+				A13E67A2296F7AF200B46E49 /* MyITFieldsView.swift in Sources */,
 				57429C72297704290031475D /* BookModalView.swift in Sources */,
 				A133CD1F297041DD00EA846C /* ITField.swift in Sources */,
 				D3D290CE297051B700745AAE /* DescriptionView.swift in Sources */,
@@ -475,7 +483,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Preview Content\"";
-				DEVELOPMENT_TEAM = LPVYFJX62D;
+				DEVELOPMENT_TEAM = 46RPY5JJKR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -504,7 +512,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Preview Content\"";
-				DEVELOPMENT_TEAM = LPVYFJX62D;
+				DEVELOPMENT_TEAM = 46RPY5JJKR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
