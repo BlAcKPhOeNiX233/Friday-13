@@ -73,6 +73,7 @@ struct DescriptionView: View {
                     Button {
                         change(position)
                         presentationMode.wrappedValue.dismiss()
+                        
                     } label: {
                         Image(systemName: isSelected ? "minus.square" : "plus.app")
                     }

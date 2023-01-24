@@ -34,6 +34,7 @@ struct MyITFieldsView: View {
     }
     func change(position: Int) {
         itFieldViewModel.itFields[position].isSelected.toggle()
+        UserDefaults.standard.set(itFieldViewModel.itFields[position].isSelected, forKey: "\(itFieldViewModel.itFields[position].title)/isSelected")
     }
     func getFields(areSelected: Bool) -> some View {
         return TabView {

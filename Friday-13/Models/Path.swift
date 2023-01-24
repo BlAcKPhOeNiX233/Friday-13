@@ -12,6 +12,6 @@ struct Path: Identifiable {
     var buttonTitle: String
     var isSelected: Bool
     var descriptionModal: String
-    var difficulty: String;
-    var task: [String];
+    var difficulty: String
+    var task: [String]
 }
