@@ -15,6 +15,7 @@ struct DescriptionView: View {
     var demand: String
     var paths: [Path]
     var position: Int
+    var isSelected: Bool
     var change: (Int) -> Void
      var body: some View {
         ZStack {
@@ -71,7 +72,7 @@ struct DescriptionView: View {
                     Button {
                         change(position)
                     } label: {
-                        Image(systemName: "plus.app")
+                        Image(systemName: isSelected ? "minus.square" : "plus.app")
                     }
                 }
             }
