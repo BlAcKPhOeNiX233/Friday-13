@@ -67,7 +67,7 @@ class ITFieldViewModel: ObservableObject {
             ),
             ITField(
                 title: "Android Developer",
-                image: "WebDevImage",
+                image: "AndroidDevImage",
                 description: "Tester",
                 salary: "Tester",
                 demand: "Tester",
