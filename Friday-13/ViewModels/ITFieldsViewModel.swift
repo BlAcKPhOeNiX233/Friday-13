@@ -79,4 +79,14 @@ class ITFieldViewModel: ObservableObject {
             )
         ]
     }
+    
+    func getAreSelected() -> Bool {
+        for itField in itFields {
+            if itField.isSelected {
+                return true
+            }
+        }
+        
+        return false
+    }
 }
