@@ -14,12 +14,13 @@ struct MyITFieldsView: View {
             ZStack {
                 Color("myBackground").ignoresSafeArea()
                 VStack {
-                    ZStack {
+                    if itFieldViewModel.getAreSelected() == true {
+                        getFields(areSelected: true)
+                    } else {
                         Text("Choose the field your interested in!")
                             .opacity(0.15)
                             .font(.headline)
                             .frame(width: 350, height: 240)
-                        getFields(areSelected: true)
                     }
                     Text("Other IT Fields")
                         .fontWeight(.semibold)
