@@ -11,9 +11,10 @@ struct Library: Decodable {
     var items: [Book]
     
     struct Book: Identifiable, Decodable {
-        let id = UUID()
+        let id : String
+        var isFavorite: Bool?
         var volumeInfo: VolumeInfo
-    
+        
         struct VolumeInfo: Decodable {
             let title: String?
             let authors: [String]?

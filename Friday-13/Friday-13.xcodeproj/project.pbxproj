@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		15BE132029706A590082A0C4 /* ITFieldsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BE131F29706A580082A0C4 /* ITFieldsViewModel.swift */; };
+		15BE13642981752F0082A0C4 /* FavoriteBooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BE13632981752F0082A0C4 /* FavoriteBooks.swift */; };
 		57429C72297704290031475D /* BookModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57429C71297704290031475D /* BookModalView.swift */; };
 		A1247746296EF24D005579CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1247745296EF24D005579CB /* ContentView.swift */; };
 		A124774B296EF24E005579CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A124774A296EF24E005579CB /* Preview Assets.xcassets */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		15BE131F29706A580082A0C4 /* ITFieldsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITFieldsViewModel.swift; sourceTree = "<group>"; };
+		15BE13632981752F0082A0C4 /* FavoriteBooks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBooks.swift; sourceTree = "<group>"; };
 		57429C71297704290031475D /* BookModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModalView.swift; sourceTree = "<group>"; };
 		A1247740296EF24D005579CB /* Friday-13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Friday-13.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1247745296EF24D005579CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				A133CD1E297041DD00EA846C /* ITField.swift */,
 				A1CC8ED5297061D6005B7A65 /* Path.swift */,
 				A13339052978302D00BC720A /* Library.swift */,
+				15BE13632981752F0082A0C4 /* FavoriteBooks.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				A1247746296EF24D005579CB /* ContentView.swift in Sources */,
 				D35522152975A22900E4A603 /* LibraryView.swift in Sources */,
 				A1800F2A2975AE05002EC6EE /* booksViewModel.swift in Sources */,
+				15BE13642981752F0082A0C4 /* FavoriteBooks.swift in Sources */,
 				A13E679F296F7AF200B46E49 /* Friday_13App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
