@@ -31,19 +31,10 @@ class FavoriteBooks: ObservableObject{
     func add(_ id: String) {
             objectWillChange.send()
             books.insert(id)
-            save()
-        }
+                    }
     
     func remove(_ id: String) {
             objectWillChange.send()
             books.remove(id)
-            save()
         }
-    
-    func save() {
-           let encoder = JSONEncoder()
-           if let encoded = try? encoder.encode(FavoriteBooks) {
-               defaults.set(encoded, forKey: "FavoritesBooks")
-           }
-       }
 }

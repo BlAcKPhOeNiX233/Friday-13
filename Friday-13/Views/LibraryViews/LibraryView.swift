@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LibraryView: View {
     @StateObject var booksViewModel = BooksViewModel()
+    @State var favBooks = [Library.Book]()
     @State private var showingSheet = false
     @State var book: Library.Book?
     var body: some View {
@@ -40,11 +41,14 @@ struct LibraryView: View {
                                             }
                                         }.sheet(item: $book) { book in
                                             BookModalView(
+                                                id: book.id,
+                                                isFavorite: book.isFavorite ?? false,
                                                 image: book.volumeInfo.imageLinks?.thumbnail ?? "",
                                                 name: book.volumeInfo.title ?? "",
                                                 author: book.volumeInfo.authors ?? [""],
                                                 description: book.volumeInfo.description ?? "")
                                         }
+//                                       
                                     }
                                 }.padding(.horizontal)
                             }
@@ -54,6 +58,13 @@ struct LibraryView: View {
                 }
             }.navigationTitle("Library")
         }
+    }
+    
+    func addToFavorite(item: Library.Book){
+        if item.isFavorite == true {
+            favBooks.insert(item, at: 0)
+        }
+        
     }
 }
 

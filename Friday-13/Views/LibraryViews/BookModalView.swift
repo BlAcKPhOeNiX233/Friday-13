@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct BookModalView: View {
-    @ObservedObject var favoriteBooks = FavoriteBooks()
+    @StateObject var booksMV = BooksMVModel()
     let id: String
+    let isFavorite: Bool
     let image: String
     let name: String
     let author: [String]
     let description: String
-    
+
     var body: some View {
         
         NavigationStack{
@@ -51,13 +52,11 @@ struct BookModalView: View {
                 }.padding(.horizontal,50).toolbar {
                     ToolbarItem {
                         Button {
-                            if self.favoriteBooks.contains() {
-                                     self.favorites.remove(id)
-                                 } else {
-                                     self.favorites.add(id)
-                                 }
+                            booksMV.toggleFav(item: id)
+                            booksMV.toggleIsFavorite(id: id, item: isFavorite)
+                            
                         } label: {
-                            Image(systemName: isFavorite ? "heart.fill" : "heart").foregroundColor(isFavorite ? .red)
+                            Image(systemName: booksMV.contains(id) ? "heart.fill" : "heart").foregroundColor(booksMV.contains(id) ? .red : .black)
                         }
                     }
                 }
@@ -76,6 +75,8 @@ struct BookModalView: View {
 struct BookModalView_Previews: PreviewProvider {
     static var previews: some View {
         BookModalView(
+            id: "",
+            isFavorite: false,
             image: "Book",
             name: "Make Your First App with Xcode",
             author: ["Roelf Sluman"],

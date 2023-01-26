@@ -14,7 +14,6 @@ struct Library: Decodable {
         let id : String
         var isFavorite: Bool?
         var volumeInfo: VolumeInfo
-        
         struct VolumeInfo: Decodable {
             let title: String?
             let authors: [String]?
