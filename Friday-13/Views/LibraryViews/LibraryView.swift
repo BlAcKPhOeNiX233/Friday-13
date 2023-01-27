@@ -48,7 +48,7 @@ struct LibraryView: View {
                                                 author: book.volumeInfo.authors ?? [""],
                                                 description: book.volumeInfo.description ?? "")
                                         }
-//                                       
+
                                     }
                                 }.padding(.horizontal)
                             }
@@ -64,7 +64,6 @@ struct LibraryView: View {
         if item.isFavorite == true {
             favBooks.insert(item, at: 0)
         }
-        
     }
 }
 

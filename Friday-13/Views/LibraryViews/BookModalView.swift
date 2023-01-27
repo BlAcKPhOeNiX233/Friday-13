@@ -63,13 +63,7 @@ struct BookModalView: View {
             }.padding(.top)
         }
     }
-//    func addFavorite() {
-//        .isSelected.toggle()
-//        UserDefaults.standard.set(
-//            itFieldViewModel.itFields[position].isSelected,
-//            forKey: "\(itFieldViewModel.itFields[position].title)/isSelected"
-//        )
-//    }
+
 }
 
 struct BookModalView_Previews: PreviewProvider {
