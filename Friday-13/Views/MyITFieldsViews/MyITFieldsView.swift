@@ -14,7 +14,7 @@ struct MyITFieldsView: View {
             ZStack {
                 Color("myBackground").ignoresSafeArea()
                 VStack {
-                    if itFieldViewModel.getAreSelected() == true {
+                    if itFieldViewModel.getAreSelected() {
                         getFields(areSelected: true)
                     } else {
                         Text("Choose the field your interested in!")

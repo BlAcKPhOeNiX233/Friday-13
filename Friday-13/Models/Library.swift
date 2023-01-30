@@ -9,27 +9,29 @@ import Foundation
 
 struct Library: Decodable {
     var items: [Book]
-    
     struct Book: Identifiable, Decodable {
         let id = UUID()
         var volumeInfo: VolumeInfo
-    
-        struct VolumeInfo: Decodable {
-            let title: String?
-            let authors: [String]?
-            let publisher: String?
-            let description: String?
-            var imageLinks: ImageLinks?
-            
-            struct ImageLinks: Decodable{
-                var thumbnail: String?
-            }
+        var isFavorite: Bool?
+        mutating func setIsFavorite() {
+            isFavorite = UserDefaults.standard.bool(forKey: "\(volumeInfo.title!)/isSelected")
         }
     }
-    
     mutating func convertProtocol() {
         for index in 0 ..< items.count {
-            items[index].volumeInfo.imageLinks!.thumbnail = items[index].volumeInfo.imageLinks!.thumbnail!.replacingOccurrences(of: "http", with: "https")
+            items[index].volumeInfo.imageLinks!.thumbnail =
+            items[index].volumeInfo.imageLinks!.thumbnail!
+                .replacingOccurrences(of: "http", with: "https")
         }
+    }
+}
+
+struct VolumeInfo: Decodable {
+    let title: String?
+    let authors: [String]?
+    let description: String?
+    var imageLinks: ImageLinks?
+    struct ImageLinks: Decodable {
+        var thumbnail: String?
     }
 }

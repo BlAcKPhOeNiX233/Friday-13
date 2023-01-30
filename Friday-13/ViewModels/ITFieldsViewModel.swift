@@ -61,7 +61,13 @@ class ITFieldViewModel: ObservableObject {
                 demand: "Tester",
                 paths: [
                     Path(buttonTitle: "Easy way", isSelected: false, descriptionModal: "", difficulty: "", task: [""]),
-                    Path(buttonTitle: "Medium way", isSelected: false, descriptionModal: "",difficulty: "", task: [""]),
+                    Path(
+                        buttonTitle: "Medium way",
+                         isSelected: false,
+                         descriptionModal: "",
+                         difficulty: "",
+                         task: [""]
+                        ),
                     Path(buttonTitle: "Hard way", isSelected: false, descriptionModal: "", difficulty: "", task: [""])
                 ]
             ),
@@ -73,20 +79,22 @@ class ITFieldViewModel: ObservableObject {
                 demand: "Tester",
                 paths: [
                     Path(buttonTitle: "Easy way", isSelected: false, descriptionModal: "", difficulty: "", task: [""]),
-                    Path(buttonTitle: "Medium way", isSelected: false, descriptionModal: "",difficulty: "", task: [""]),
+                    Path(
+                        buttonTitle: "Medium way",
+                         isSelected: false,
+                        descriptionModal: "",
+                        difficulty: "",
+                        task: [""]
+                    ),
                     Path(buttonTitle: "Hard way", isSelected: false, descriptionModal: "", difficulty: "", task: [""])
                 ]
             )
         ]
     }
-    
     func getAreSelected() -> Bool {
-        for itField in itFields {
-            if itField.isSelected {
-                return true
-            }
+        for itField in itFields where itField.isSelected == true {
+            return true
         }
-        
         return false
     }
 }
