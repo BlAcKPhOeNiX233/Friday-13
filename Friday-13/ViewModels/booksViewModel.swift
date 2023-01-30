@@ -8,7 +8,7 @@
 import Foundation
 
 extension LibraryView {
-    class BooksViewModel: ObservableObject {
+    @MainActor class BooksViewModel: ObservableObject {
         @Published var itFields: [ITField]
         init() {
             // Initialize all the IT fields
@@ -22,29 +22,18 @@ extension LibraryView {
         // Initialize all the books by calling Google Books API
         func setBooks() async {
             do {
-                // Initialize the books of the IT field
-                try await itFields[0].books = getBooks(
-                    url: "https://www.googleapis.com/books/v1/volumes?q=iOS-Development"
-                )
-                // Set all the favorites books
-                for position in 0 ..< itFields[0].books!.items.count {
-                    itFields[0].books?.items[position].setIsFavorite()
+                for fieldPosition in 0 ..< itFields.count {
+                    // Initialize the books of the IT field
+                    try await itFields[fieldPosition].books = getBooks(
+                        url: "https://www.googleapis.com/books/v1/volumes?q=\(itFields[fieldPosition].title)"
+                    )
+                    // Set all the favorites books
+                    for bookPosition in 0 ..< itFields[fieldPosition].books!.items.count {
+                        itFields[fieldPosition].books?.items[bookPosition].setIsFavorite()
+                    }
+                    // Convert all the https protocols in https
+                    itFields[fieldPosition].books?.convertProtocol()
                 }
-                itFields[0].books?.convertProtocol()
-                try await itFields[1].books = getBooks(
-                    url: "https://www.googleapis.com/books/v1/volumes?q=Android-Development"
-                )
-                for position in 0 ..< itFields[1].books!.items.count {
-                    itFields[1].books?.items[position].setIsFavorite()
-                }
-                itFields[1].books?.convertProtocol()
-                try await itFields[2].books = getBooks(
-                    url: "https://www.googleapis.com/books/v1/volumes?q=Web-Development"
-                )
-                for position in 0 ..< itFields[2].books!.items.count {
-                    itFields[2].books?.items[position].setIsFavorite()
-                }
-                itFields[2].books?.convertProtocol()
             } catch {
                 print("Error getting books: \(error.localizedDescription)")
             }

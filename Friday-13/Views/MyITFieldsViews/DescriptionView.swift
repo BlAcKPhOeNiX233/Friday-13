@@ -10,11 +10,7 @@ import SwiftUI
 struct DescriptionView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State private var selectedPath: Path?
-    var title: String
-    var description: String
-    var salary: String
-    var demand: String
-    var paths: [Path]
+    var itField: ITField
     var position: Int
     var isSelected: Bool
     var change: (Int) -> Void
@@ -27,33 +23,33 @@ struct DescriptionView: View {
                     VStack(alignment: .leading) {
                         Text("Description")
                             .fontWeight(.bold)
-                        Text(description)
+                        Text(itField.description!)
                             .font(.subheadline)
                             .padding(.top, 1)
                             .padding(.bottom)
                             .lineLimit(.max)
                         Text("Salary")
                             .fontWeight(.bold)
-                        Text(salary)
+                        Text(itField.salary!)
                             .font(.subheadline)
                             .padding(.top, 1)
                             .padding(.bottom)
                         Text("Demand")
                             .fontWeight(.bold)
-                        Text(demand)
+                        Text(itField.demand!)
                             .font(.subheadline)
                             .padding(.top, 1)
                             .padding(.bottom)
                     }
                     .padding(.horizontal, 17)
                     VStack(alignment: .leading) {
-                        Text("To become \(title)")
+                        Text("To become \(itField.title)")
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.top)
                     }
                     // All the paths of the IT field
-                    ForEach(paths) { path in
+                    ForEach(itField.paths!) { path in
                         Button {
                             selectedPath = path
                         } label: {
@@ -70,7 +66,7 @@ struct DescriptionView: View {
                     }
                 }.padding(.bottom)
             }
-            .navigationTitle(title)
+            .navigationTitle(itField.title)
             .toolbar {
                 ToolbarItem {
                     // When clicked, change the selection state of the IT field

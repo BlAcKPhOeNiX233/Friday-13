@@ -42,11 +42,7 @@ struct MyITFieldsView: View {
                 if itFieldViewModel.itFields[position].isSelected == areSelected {
                     NavigationLink(
                         destination: DescriptionView(
-                            title: itFieldViewModel.itFields[position].title,
-                            description: itFieldViewModel.itFields[position].description!,
-                            salary: itFieldViewModel.itFields[position].salary!,
-                            demand: itFieldViewModel.itFields[position].demand!,
-                            paths: itFieldViewModel.itFields[position].paths!,
+                            itField: itFieldViewModel.itFields[position],
                             position: position,
                             isSelected: itFieldViewModel.itFields[position].isSelected,
                             change: itFieldViewModel.change
