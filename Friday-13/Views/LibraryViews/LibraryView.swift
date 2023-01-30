@@ -51,7 +51,7 @@ struct LibraryView: View {
                         } placeholder: {
                             ProgressView()
                         }
-                    }.sheet(item: $book) { book in
+                    }.sheet(item: $book) { _ in
                         BookModalView(
                             book: book,
                             itFieldPosition: itFieldPosition,
