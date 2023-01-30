@@ -9,8 +9,8 @@ import SwiftUI
 
 struct BookModalView: View {
     var book: Library.Book
-    let itFieldPosition: Int
-    let change: (Int, String) -> Void
+    var itFieldPosition: Int
+    var change: (Int, String) -> Void
     var body: some View {
         NavigationStack {
             ScrollView(showsIndicators: false) {

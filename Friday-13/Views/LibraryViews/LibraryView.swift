@@ -15,6 +15,7 @@ struct LibraryView: View {
         NavigationStack {
             ZStack {
                 Color("myBackground").ignoresSafeArea()
+                // List of all the books subdivided in IT fields
                 ScrollView {
                     VStack(alignment: .leading) {
                         ForEach(0 ..< booksViewModel.itFields.count) { position in
@@ -32,6 +33,7 @@ struct LibraryView: View {
             }
         }
     }
+    // Return a list of books
     func getBooks(books: [Library.Book]?, itFieldPosition: Int) -> some View {
         return ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 16) {
@@ -55,22 +57,11 @@ struct LibraryView: View {
                         BookModalView(
                             book: book,
                             itFieldPosition: itFieldPosition,
-                            change: change
+                            change: booksViewModel.change
                         )
                     }
                 }
             }.padding(.horizontal)
-        }
-    }
-    func change(itFieldPosition: Int, bookTitle: String) {
-        for position in
-                0 ..< booksViewModel.itFields[itFieldPosition].books!.items.count where
-        booksViewModel.itFields[itFieldPosition].books!.items[position].volumeInfo.title == bookTitle {
-            booksViewModel.itFields[itFieldPosition].books!.items[position].isFavorite!.toggle()
-            UserDefaults.standard.set(
-                booksViewModel.itFields[itFieldPosition].books!.items[position].isFavorite!,
-                forKey: "\(bookTitle)/isSelected"
-            )
         }
     }
 }

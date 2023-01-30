@@ -13,8 +13,9 @@ struct Library: Decodable {
         let id = UUID()
         var volumeInfo: VolumeInfo
         var isFavorite: Bool?
+        // Search from the userDefaults if the book is one of the favorite ones (the default value is "false")
         mutating func setIsFavorite() {
-            isFavorite = UserDefaults.standard.bool(forKey: "\(volumeInfo.title!)/isSelected")
+            isFavorite = UserDefaults.standard.bool(forKey: "\(volumeInfo.title!)/isFavorite")
         }
     }
     mutating func convertProtocol() {

@@ -14,6 +14,7 @@ struct MyITFieldsView: View {
             ZStack {
                 Color("myBackground").ignoresSafeArea()
                 VStack {
+                    // Get all the selected IT fields
                     if itFieldViewModel.getAreSelected() {
                         getFields(areSelected: true)
                     } else {
@@ -27,19 +28,14 @@ struct MyITFieldsView: View {
                         .font(.title2)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.leading, 15)
+                    // Get all the not selected IT fields
                     getFields(areSelected: false)
                     Spacer()
                 }.navigationTitle("My IT Fields")
             }
         }
     }
-    func change(position: Int) {
-        itFieldViewModel.itFields[position].isSelected.toggle()
-        UserDefaults.standard.set(
-            itFieldViewModel.itFields[position].isSelected,
-            forKey: "\(itFieldViewModel.itFields[position].title)/isSelected"
-        )
-    }
+    // Return all the IT field that are selected or not
     func getFields(areSelected: Bool) -> some View {
         return TabView {
             ForEach(0 ..< itFieldViewModel.itFields.count, id: \.self) { position in
@@ -53,7 +49,7 @@ struct MyITFieldsView: View {
                             paths: itFieldViewModel.itFields[position].paths!,
                             position: position,
                             isSelected: itFieldViewModel.itFields[position].isSelected,
-                            change: change
+                            change: itFieldViewModel.change
                         )
                     ) {
                         ZStack {

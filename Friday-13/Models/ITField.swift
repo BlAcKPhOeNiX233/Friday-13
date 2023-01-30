@@ -36,6 +36,7 @@ struct ITField: Identifiable {
         self.paths = paths
         self.percentage = percentage
         self.books = books
+        // Search from the userDefaults if the field selected (the default value is "false")
         self.isSelected = UserDefaults.standard.bool(forKey: "\(title)/isSelected")
     }
 }

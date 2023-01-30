@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct ModalPathView: View {
-    @Environment(\.presentationMode)
-    var presentationMode
     var path: Path
     var body: some View {
         ScrollView {

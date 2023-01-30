@@ -21,6 +21,7 @@ struct DescriptionView: View {
      var body: some View {
         ZStack {
             Color("myBackground").ignoresSafeArea()
+            // Description of the IT field
             ScrollView {
                 VStack {
                     VStack(alignment: .leading) {
@@ -43,13 +44,15 @@ struct DescriptionView: View {
                             .font(.subheadline)
                             .padding(.top, 1)
                             .padding(.bottom)
-                    }.padding(.horizontal, 17)
+                    }
+                    .padding(.horizontal, 17)
                     VStack(alignment: .leading) {
                         Text("To become \(title)")
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.top)
                     }
+                    // All the paths of the IT field
                     ForEach(paths) { path in
                         Button {
                             selectedPath = path
@@ -70,8 +73,10 @@ struct DescriptionView: View {
             .navigationTitle(title)
             .toolbar {
                 ToolbarItem {
+                    // When clicked, change the selection state of the IT field
                     Button {
                         change(position)
+                        // Close the view
                         presentationMode.wrappedValue.dismiss()
                     } label: {
                         Image(systemName: isSelected ? "minus.square" : "plus.app")
